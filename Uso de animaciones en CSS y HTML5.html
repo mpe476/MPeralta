@@ -62,12 +62,42 @@ li {
   }
 }
 
-  .zoom{ 
-transition;transform .5s;
+ div {
+  font-weight: bold;
+  position: relative;
+  -webkit-animation: mymove 15s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 5s infinite;
 }
-  .zoom;hover{ 
-transform; scale (1.5);
+
+/* Safari 4.0 - 8.0 */
+#div1 {-webkit-animation-timing-function: linear;}
+#div2 {-webkit-animation-timing-function: ease;}
+#div3 {-webkit-animation-timing-function: ease-in;}
+#div4 {-webkit-animation-timing-function: linear;}
+#div5 {-webkit-animation-timing-function: ease;}
+#div6 {-webkit-animation-timing-function: ease-in;}
+/* Standard syntax */
+#div1 {animation-timing-function: linear;}
+#div2 {animation-timing-function: ease;}
+#div3 {animation-timing-function: ease-in;}
+#div4 {animation-timing-function: linear;}
+#div5 {animation-timing-function: ease;}
+#div6 {animation-timing-function: ease-in;}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+  from {left: 0px;}
+  to {left: 300px;}
 }
+
+/* Standard syntax */
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 300px;}
+}      
+
+
+
+
   </style>
 
 </head>
@@ -75,26 +105,26 @@ transform; scale (1.5);
 <h1>HELLO PEOPLE!</h1>
 <h2>Frases motivacionales
 </h2>
-<center><img class="zoom" src="motivacion-612x344.jpg"
+<center><img src="motivacion-612x344.jpg"
        width="600"
        height="300"></center>
-
 <p>
 ¿Disfrutas leyendo frases motivadoras? Déjame que comparta contigo las frases positivas y de motivación que más me sirvieron de inspiración. Sacadas de libros, canciones y películas.  
  </p>
-<ul><center>
+<ul id="output">
+<center>
 
-<li>“El éxito es la habilidad de ir de fracaso en fracaso sin perder el entusiasmo.” Winston Churchill</li>
+<div id="div1"><li>“El éxito es la habilidad de ir de fracaso en fracaso sin perder el entusiasmo.” Winston Churchill</li></div>
 <br>
-<li>“Ser feliz no es tener una vida perfecta, ser feliz es reconocer que la vida vale la pena, a pesar de las dificultades.”</li>
+<div id="div2"><li>“Ser feliz no es tener una vida perfecta, ser feliz es reconocer que la vida vale la pena, a pesar de las dificultades.”</li></div>
 <br>
-<li>“Cuando estés pasando por un momento triste mira al cielo y piensa: allá arriba el sol también esta solo y sigue brillando”</li>
+<div id="div3"><li>“Cuando estés pasando por un momento triste mira al cielo y piensa: allá arriba el sol también esta solo y sigue brillando”</li></div>
 <br>
-<li>“El que tiene un porqué para vivir, puede soportar casi cualquier cómo.”</li>
+<div id="div4"><li>“El que tiene un porqué para vivir, puede soportar casi cualquier cómo.”</li></div>
 <br>
-<li>“No compitas con nadie, no tienes que demostrarle nada a nadie no tienes que llegar a donde otro llegó, solo superar tus propios límites.”</li>
+<div id="div5"><li>“No compitas con nadie, no tienes que demostrarle nada a nadie no tienes que llegar a donde otro llegó, solo superar tus propios límites.”</li></div>
 <br>
-<li>“Para llegar donde nunca antes has llegado, tendrás que esforzarte como nunca antes lo has hecho.”</li>
+<div id="div6"><li>“Para llegar donde nunca antes has llegado, tendrás que esforzarte como nunca antes lo has hecho.”</li></div>
 </center>
 </ul>
 </body>
