@@ -29,19 +29,25 @@
 
 <h2><font color="maroon"><strong>Obt&eacute;n tu localizaci&oacute;n</strong></font></h2>
 <button onclick="getLocation()">Click</button>
-
 <p id="demo"></p>
 
 <script>
-  var latlon = position.coords.latitude + "," + position.coords.longitude;
+var x = document.getElementById("demo");
 
-  var img_url = "https://maps.googleapis.com/maps/api/staticmap?center=
-  "+latlon+"&zoom=14&size=400x300&sensor=false&key=YOUR_KEY";
-
-  document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+    
+function showPosition(position) {
+    x.innerHTML="Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
 }
 </script>
+<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2272.664171827283!2d-79.53119102673881!3d8.983403877992739!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2spa!4v1573616558670!5m2!1ses!2spa" width="300" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 </body>
 </html>
 
-</body>
