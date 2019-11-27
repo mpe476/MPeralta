@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uso de animaciones CSS y html5</title>
+  
+<style type="text/css">
+  body {
+    color: purple;
+    background-color: #eee8aa }
+h1 {
+  color: green;
+}
+h1 {
+  animation-duration: 10s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+}
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+  h1 {
+    font-family: Times New Roman}
+ 
+  </style>
+
+</head>
+<body>
+<h1>Hello people!</h1>
+
+
+</p>
+
+</body>
+</html>
